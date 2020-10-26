@@ -12,7 +12,7 @@ const axiosRequest = async filePath => {
             .create({ headers: formData.getHeaders() })
             // .post('http://localhost:5000/predict', formData);      // Local
             // .post('https://theraphy-flask-heroku2.herokuapp.com/predict', formData);   // Server
-            .post('https://l7iz5jhq3f.execute-api.ap-northeast-2.amazonaws.com/dev', formData);
+            .post('https://zh7hgwvti7.execute-api.ap-northeast-2.amazonaws.com/dev', formData);
         // predict는 flask폴더 내 rest.py의 predict()와 연관이 있는 듯.
         // .post('http://joyuriz-api:5000/predict', formData);
         return response.data;
