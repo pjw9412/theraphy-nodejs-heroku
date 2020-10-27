@@ -15,6 +15,7 @@ const axiosRequest = async filePath => {
             .post('https://xx1g0to124.execute-api.ap-northeast-2.amazonaws.com/dev/', formData);
         // predict는 flask폴더 내 rest.py의 predict()와 연관이 있는 듯.
         // .post('http://joyuriz-api:5000/predict', formData);
+        console.log("RESPONSE  at axiosRequest.js");
         return response.data;
     } catch (e) {
         console.log('[ERROR|axiosRequest] ', e);

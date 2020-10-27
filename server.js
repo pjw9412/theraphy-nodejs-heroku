@@ -14,6 +14,7 @@ app.post('/', multerOption.single('image'), async (requset, response) => {
     const fileName = requset.file['filename'];
     const hash = md5File.sync('userUpload/' + fileName);
     console.log('FILE NAME = ', fileName);
+    console.log('(server.js) REQUEST = ', reuqest);
 
     try {
         // const imageInfo = [
@@ -59,7 +60,6 @@ app.post('/', multerOption.single('image'), async (requset, response) => {
 
         // axiosRequest => flask API와의 통신
         const axiosResponse = await axiosRequest('userUpload/' + fileName);
-        console.log("AFTER axiosRequest")
         if (axiosResponse['success'] === true) {
             console.log("axiosRequest SUCCESS");
             let imageInfo=[];
