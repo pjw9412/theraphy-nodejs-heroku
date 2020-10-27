@@ -10,11 +10,11 @@ const port = process.env.PORT || 3001;
 app.use(cors()); // use cors middleware
 
 // post(url, data, config?)
-app.post('/', multerOption.single('image'), async (requset, response) => {
-    const fileName = requset.file['filename'];
+app.post('/', multerOption.single('image'), async (request, response) => {
+    const fileName = request.file['filename'];
     const hash = md5File.sync('userUpload/' + fileName);
     console.log('FILE NAME = ', fileName);
-    console.log('(server.js) REQUEST = ', reuqest);
+    console.log('(server.js) REQUEST = ', request);
 
     try {
         // const imageInfo = [
