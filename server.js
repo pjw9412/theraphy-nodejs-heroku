@@ -60,6 +60,7 @@ app.post('/', multerOption.single('image'), async (request, response) => {
 
         // axiosRequest => flask API와의 통신
         const axiosResponse = await axiosRequest('userUpload/' + fileName);
+        
         if (axiosResponse['success'] === true) {
             console.log("axiosRequest SUCCESS");
             let imageInfo=[];
