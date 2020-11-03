@@ -84,7 +84,8 @@ app.post('/', multerOption.single('image'), async (request, response) => {
                             voteYuri: 0,
                             voteYena: 0,
                             request: 1,
-                            house: [4, 5, 7, 8, 9, 12, 18, 19, 22, 23, 24, 27, 31]
+                            // house: [4, 5, 7, 8, 9, 12, 18, 19, 22, 23, 24, 27, 31]
+                            house: axiosResponse['house']
                         }
                     ];
                 }else{  // 이후 배열에는 일부만 set
