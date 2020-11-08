@@ -17,47 +17,6 @@ app.post('/', multerOption.single('image'), async (request, response) => {
     console.log('(server.js) REQUEST = ', request);
 
     try {
-        // const imageInfo = [
-        //     {
-        //         success: true,
-        //         hash: hash,
-        //         predictions: 'House',
-        //         coordinate:{
-        //             x: 100,
-        //             y: 100,
-        //             width: 300,
-        //             height: 300,
-        //         },
-        //         path: fileName,
-        //         voteChaewon: 0,
-        //         voteYuri: 0,
-        //         voteYena: 0,
-        //         request: 1,
-        //         house: [4, 5, 7, 8, 9, 12, 18, 19, 22, 23, 24, 27, 31]
-        //     },
-        //     {
-        //         hash: hash,
-        //         predictions: 'Window',
-        //         coordinate:{
-        //             x: 200,
-        //             y: 200,
-        //             width: 300,
-        //             height: 300,
-        //         }
-        //     },
-        //     {
-        //         hash: hash,
-        //         predictions: 'Door',
-        //         coordinate:{
-        //             x: 300,
-        //             y: 300,
-        //             width: 300,
-        //             height: 300,
-        //         },
-        //     }
-        // ];
-        // response.send(imageInfo);
-
         // axiosRequest => flask API와의 통신
         const axiosResponse = await axiosRequest('userUpload/' + fileName);
         
