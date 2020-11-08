@@ -16,8 +16,6 @@ const axiosRequest = async filePath => {
             // .post('https://theraphy-flask-heroku2.herokuapp.com/predict', formData);   // Server
             //.post('https://e3kss2gr7l.execute-api.ap-northeast-2.amazonaws.com/dev/lambda_efs', formData); // REST-API GATEWAY-LAMBDA
             //.post('https://3pvwvh59mk.execute-api.ap-northeast-2.amazonaws.com/lambda_efs',formData); // HTP-API GATEWAY-LAMBDA
-        // predict는 flask폴더 내 rest.py의 predict()와 연관이 있는 듯.
-        // .post('http://joyuriz-api:5000/predict', formData);
         return response.data;
     } catch (e) {
         console.log('[ERROR|axiosRequest] ', e);
